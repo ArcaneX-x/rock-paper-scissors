@@ -12,6 +12,7 @@ puts
 final_answer = 1
 while final_answer == 1 do 
 	puts "Отлично!"
+computer_choise = rand(3)
 
 until final_answer.between?(1,2) do
 	puts "Нужно выбрать вариант 1 или 2"
