@@ -14,11 +14,6 @@ while final_answer == 1 do
 	puts "Отлично!"
 computer_choise = rand(3)
 
-until final_answer.between?(1,2) do
-	puts "Нужно выбрать вариант 1 или 2"
-	final_answer = gets.to_i
-end
-
 puts "Выберите вариант"
 puts
 puts "1.Камень"
@@ -62,6 +57,10 @@ end
  puts "2. Нет"
 
 	final_answer = gets.to_i
-	if final_answer != 1
+	until final_answer.between?(1,2) do
+	puts "Нужно выбрать вариант 1 или 2"
+	final_answer = gets.to_i
 	end
+		if final_answer != 1
+		end
 end
