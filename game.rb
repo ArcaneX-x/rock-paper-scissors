@@ -14,13 +14,21 @@ puts "2.Ножницы"
 puts "3.Бумага"
 puts
 
+players_input = nil
 players_input = gets.to_i
 puts
 
-unless (players_input > 0) && (players_input <= objects.size)
+# unless (players_input > 0) && (players_input <= objects.size)
+	# puts "Нужно выбрать вариант 1, 2 или 3"
+	# exit
+# end
+
+# until players_input.between?(1,3) do
+until (1..3).include?(players_input) do
 	puts "Нужно выбрать вариант 1, 2 или 3"
-	exit
+	players_input = gets.to_i
 end
+	
 
 players_input -= 1 
 
