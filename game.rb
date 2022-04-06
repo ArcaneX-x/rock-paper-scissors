@@ -1,14 +1,23 @@
-# until final_answer != "Да" && final_answer != "Нет" do
-
 	objects = [
 	"Камень",
 	"Ножницы",
 	"Бумага"
 ]
+
 computer_choise = rand(3)
 
 puts "Давайте сыграем в игру '\Камень, ножницы, бумага'\ "
 puts
+
+final_answer = 1
+while final_answer == 1 do 
+	puts "Отлично!"
+
+until final_answer.between?(1,2) do
+	puts "Нужно выбрать вариант 1 или 2"
+	final_answer = gets.to_i
+end
+
 puts "Выберите вариант"
 puts
 puts "1.Камень"
@@ -46,11 +55,12 @@ else
 	puts "Победил компьютер " + "У него " + "'" + objects [computer_choise] + "'"
 end
 
-# puts 
-# puts "Сыграем еще раз?"
-# puts "Напишите '\Да'\ или '\Нет'\ " 
-# final_answer = gets.to_s
-#	if final_answer == "Нет"
-##		puts "Пока"##
-#	else final_answer == "Да"
-		
+ puts "Сыграем еще раз?"
+ puts
+ puts "1. Да"
+ puts "2. Нет"
+
+	final_answer = gets.to_i
+	if final_answer != 1
+	end
+end
