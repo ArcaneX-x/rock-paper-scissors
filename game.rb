@@ -40,7 +40,7 @@ players_input -= 1
 if players_input == computer_choice 
 	puts "Ничья"
 elsif players_input == 0 && computer_choice == 1
-		puts "Вы выиграли! Компьютер выбрал \" #{objects[computer_choice]} \" "
+		puts "Вы выиграли! Компьютер выбрал \"#{objects[computer_choice]}\" "
 elsif players_input == 1 && computer_choice == 2
 		puts "Вы выиграли! " + "Компьютер выбрал " + "'" + objects [computer_choice] + "'"
 elsif players_input == 2 && computer_choice == 0
