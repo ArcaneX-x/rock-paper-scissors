@@ -1,4 +1,6 @@
-objects = [
+# until final_answer != "Да" && final_answer != "Нет" do
+
+	objects = [
 	"Камень",
 	"Ножницы",
 	"Бумага"
@@ -35,7 +37,7 @@ players_input -= 1
 if players_input == computer_choise 
 	puts "Ничья"
 elsif players_input == 0 && computer_choise == 1
-		puts "Вы выиграли! " + "Компьютер выбрал " + "'" + objects [computer_choise] + "'"
+		puts "Вы выиграли! Компьютер выбрал  #{objects[computer_choise]}"
 elsif players_input == 1 && computer_choise == 2
 		puts "Вы выиграли! " + "Компьютер выбрал " + "'" + objects [computer_choise] + "'"
 elsif players_input == 2 && computer_choise == 0
@@ -44,3 +46,11 @@ else
 	puts "Победил компьютер " + "У него " + "'" + objects [computer_choise] + "'"
 end
 
+# puts 
+# puts "Сыграем еще раз?"
+# puts "Напишите '\Да'\ или '\Нет'\ " 
+# final_answer = gets.to_s
+#	if final_answer == "Нет"
+##		puts "Пока"##
+#	else final_answer == "Да"
+		
