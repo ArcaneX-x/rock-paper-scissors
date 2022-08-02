@@ -1,20 +1,11 @@
-def who_won(user_choice, computer_choice)
-# 0 -- ничья
-# 1 -- победил игрок
-# 2 -- победил компьютер
-if user_choice == computer_choice
-  return 0
-end
+def who_won(user_choice, computer_choice, win_conditions)
+  return 0 if user_choice == computer_choice
 
-win_conditions = ["01", "12", "20"]
+  code = "#{user_choice}#{computer_choice}"
 
-code = "#{user_choice}#{computer_choice}" # "01"
+  win_condition = win_conditions.include?(code)
 
-win_condition = win_conditions.include?(code)
+  return 1 if win_condition
 
-if win_condition
-  return 1
-end
-
-return 2
+  2
 end
